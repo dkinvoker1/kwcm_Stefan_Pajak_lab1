@@ -1,10 +1,10 @@
 #define _USE_MATH_DEFINES
-#include "LaborkaConfig.h"
 #include <iostream>
 #include <math.h>
 
 #ifdef USE_TRIGONOMETRY_DEGREE
-	#include <trygonometria.h>
+	#include "LaborkaConfig.h"
+#include <trygonometria.h>
 #else
 	#include<cmath>
 #endif
