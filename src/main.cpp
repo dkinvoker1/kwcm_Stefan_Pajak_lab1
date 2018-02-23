@@ -2,6 +2,7 @@
 #include <iostream>
 #include <math.h>
 #include "LaborkaConfig.h"
+#include<string>
 #ifdef USE_TRIGONOMETRY_DEGREE
 
 #include <trygonometria.h>
@@ -9,9 +10,15 @@
 	#include<cmath>
 #endif
 
-int main() 
+int main(int argc, char* argv[]) 
 {
 	double degree=45;
+	if(argc>1)
+	{
+		degree=std::stod(argv[1]);
+	}
+
+
 	double s;
 	#ifdef USE_TRIGONOMETRY_DEGREE
 		s = degreemath::sin(degree);
